@@ -1,0 +1,29 @@
+﻿@model List<CarListViewModel>
+@{
+    Layout = null;
+    int count = 0;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>#</th>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Kasa Türü</th>
+            <th>Yıl</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.make</td>
+                <td>@item.model</td>
+                <td>@item.type</td>
+                <td>@item.year</td>
+            </tr>
+        }
+    </table>
+</div>
+

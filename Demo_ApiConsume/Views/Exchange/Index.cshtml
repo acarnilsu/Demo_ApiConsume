@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ExchangeViewListModel.Exchange_Rates>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <table class="table table-striped">
+        <tr>
+            <th>Döviz Kodu</th>
+            <th>Kur Tutarı</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.currency</td>
+                <td>@item.exchange_rate_buy</td>
+            </tr>
+        }
+    </table>
+</div>
+
